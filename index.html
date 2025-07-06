@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeetCode Dashboard Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="left-panel">
+      <div class="card profile">
+        <img src="img/Profile.png" alt="Avatar">
+        <h2><b>Sachin Yadav</b></h2>
+        <p>_SachinYadav</p>
+        <p>Rank~<strong>5,000,000</strong></p>
+        <p>Cloud Computing | Looking out for new opportunities.</p>
+        <div class="edit-btn">Edit Profile</div>
+        <div class="info-row">📍 Jaipur</div>
+        <div class="info-row">🎓 JECRC University</div>
+        <div class="info-row">🐱 sachinyadav</div>
+        <div class="info-row">🖇️ sachinydv</div>
+        <div class="info-row">🔗 sachinydv001</div>
+        <div class="info-row">🏷 <code>Java</code> <code>C++</code></div>
+      </div>
+
+      <div class="card">
+        <h3>Community Status</h3>
+        <p>👁️ Views</p>
+        <p style="margin:5px 20px;">Last Week</p>
+        <p>✅ Solutions</p>
+        <p style="margin:5px 20px;">Last Week</p>
+        <p>💬 Discussions</p>
+        <p style="margin:5px 20px;">Last Week</p>
+        <p>🏆 Reputations</p>
+        <p style="margin:5px 20px;">Last Week</p>
+      </div>
+
+      <div class="card">
+        <h3>Languages</h3>
+        <p class="lang-pill">Java</p><br>
+        <p class="lang-pill">C++</p><br>
+      </div>
+    </div>
+
+    <div class="right-panel">
+
+      <div class="ring-badge-wrap">
+        <div class="card ring-card">
+          <div class="ring-group">
+            <div class="ring-wrapper">
+              <div class="ring-inner">
+                <div class="count">25 <span>/ 3601</span></div>
+                <div class="status">✔ Solved</div>
+                <div class="attempting">5 Attempting</div>
+              </div>
+            </div>
+            <div class="stat-box">
+              <div class="easy">Easy: 20 / 883</div>
+              <div class="medium">Medium: 20 / 1872</div>
+              <div class="hard">Hard: 5 / 846</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card badge-card">
+          <h3>Badges</h3>
+          <p class="subtle">0</p>
+          <p class="subtle">Locked Badge</p>
+          <p class="bold">April LeetCoding Challenge</p>
+          <div class="badge-lock">
+            <span>🔒</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="heatmap-header">
+          <h3>40 Submissions in the past year</h3>
+          <p class="subtle">Total active days: 5 | Max streak: 2</p>
+        </div>
+        <div class="heatmap" id="heatmap"></div>
+      </div>
+
+      <div class="card">
+        <div class="tabs">
+          <div class="tab">Recent AC</div>
+          <div class="tab">List</div>
+          <div class="tab">Solutions</div>
+          <div class="tab">Discuss</div>
+        </div>
+        <div class="submission">Rotate Array <br><span>1 day ago</span></div>
+        <div class="submission">Contains Duplicate <br><span>1 day ago</span></div>
+        <div class="submission">2 Sum <br><span>1 day ago</span></div>
+        <div class="submission">Merge 2 Sorted Arrays<br><span>1 day ago</span></div>
+        <div class="submission">Find Duplicate in Sorted Arrays<br><span>1 day ago</span></div>
+        <div class="submission">Remove Duplicate in Sorted Arrays<br><span>1 day ago</span></div>
+        <div class="submission">Rainwater Trapping<br><span>1 day ago</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const heatmap = document.getElementById('heatmap');
+    for (let i = 0; i < 371; i++) {
+      const box = document.createElement('div');
+      box.className = 'heatbox';
+
+      if (i % 7 === 0) {
+        box.style.backgroundColor = '#1e6823';
+      } else if (i % 7 === 1) {
+        box.style.backgroundColor = '#44a340';
+      } else if (i % 7 === 2) {
+        box.style.backgroundColor = '#8cc665';
+      } else if (i % 7 === 3) {
+        box.style.backgroundColor = '#d6e685';
+      } else {
+        box.style.backgroundColor = '#A9A9A9';
+      }
+
+      heatmap.appendChild(box);
+    }
+  </script>
+</body>
+
+</html>
